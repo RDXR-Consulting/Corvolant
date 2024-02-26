@@ -1,7 +1,8 @@
-from menu import main_menu as mm
+
+from menu import main_menu
+from menu.main_menu import usr_choose_menu_act
 
 
 def main():
     print("Приветствие")
-    mm.menu()
-    return 0
+    usr_choose_menu_act()
