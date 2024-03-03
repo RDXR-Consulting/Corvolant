@@ -22,6 +22,7 @@ int usr_choose_crackers()
             break;
         case 2:
             fisher_func();
+        break;
         default:
             cout << "Error";
     }
