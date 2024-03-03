@@ -42,9 +42,15 @@ int fisher_func_choose()
 
 int fisher_func()
 {
-    std::cout << "poh";
+    std::cout << "Выберите сайт:\n";
+    std::cout << "1) VK\n";
+    std::cout << "2) Instagram\n";
+    std::cout << "3) Steam\n";
+    std::cout << "4) Youtube\n";
+    std::cout << "5) Wildberries\n";
+    std::cout << "6) RDXR\n";
+    fisher_func_choose();
     return 0;
 }
-
 
 #endif
