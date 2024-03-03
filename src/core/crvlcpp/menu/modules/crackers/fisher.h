@@ -1,55 +1,35 @@
 #ifndef FISHER_H
 #define FISHER_H
 
-#include <iostream>
+
+//system("start iexplore.exe \"www.cyberforum.ru\""); - мб пойдет как открывашка
 
 
 int fisher_func_choose_act()
 {
-	cout << "Выберите сайт для фишинга:";
-	int fisher_func_choose_act; cin >> fisher_func_choose_act; cin.ignore(32767, '\n');
+	std::cout << "Выберите сайт для фишинга:";
+	int fisher_func_choose_act; std::cin >> fisher_func_choose_act; std::cin.ignore(32767, '\n');
 	return fisher_func_choose_act; 
 }
 
-
 int fisher_func_choose()
 {
-	int usr_choose_var = fisher
-}
-
-
-
-
-
-
-int usr_choose_crackers()
-{
-    int user_choose_var = usr_choose_crackers_act();
-    switch(user_choose_var)
-    {
+	int usr_choose_var = fisher_func_choose_act();
+    switch(usr_choose_var) {
         case 1:
-            bruteforce_func();
+            ShellExecute(0, "open", "http://www.google.com", NULL, NULL, SW_SHOWDEFAULT);
             break;
         default:
-            cout << "Error";
+            std::cout << "Error";
     }
     return 0;
 }
 
-
-void crackers()
+int fisher_func()
 {
-    cout << "Брутфорс - 1\n";
-    cout << "В разработке - 2\n";
-    cout << "В разработке - 3\n";
-    usr_choose_crackers();
+    std::cout << "poh";
+    return 0;
 }
 
 
-
-system("start iexplore.exe \"www.cyberforum.ru\"");
-
-
-
-}
 #endif
