@@ -6,32 +6,44 @@
 
 int fisher_func_choose_act()
 {
-	std::cout << "Выберите сайт для фишинга:";
-	int fisher_func_choose_act; std::cin >> fisher_func_choose_act; std::cin.ignore(32767, '\n');
-	return fisher_func_choose_act; 
+    std::cout << "Выберите сайт для фишинга:";
+    int fisher_func_choose_act; std::cin >> fisher_func_choose_act; std::cin.ignore(32767, '\n');
+    return fisher_func_choose_act;
 }
 
 int fisher_func_choose()
 {
-	int usr_choose_var = fisher_func_choose_act();
+    int usr_choose_var = fisher_func_choose_act();
     std::fstream vk;
-    switch(usr_choose_var) {
+    std::fstream inst;
+    std::fstream steam;
+    std::fstream yt;
+    std::fstream wb;
+    std::fstream rdxr;
+    switch(usr_choose_var)
+    {
         case 1:
-            vk.open("vk.html");
+            vk.open("vk.txt");
+            ShellExecute(0, "open", "http://www.vk.com", NULL, NULL, SW_SHOWDEFAULT); //inst
             break;
         case 2:
-            ShellExecute(0, "open", "http://www.google.com", NULL, NULL, SW_SHOWDEFAULT); //inst
+            inst.open("inst.html");
+            ShellExecute(0, "open", "http://www.instagram.com", NULL, NULL, SW_SHOWDEFAULT); //inst
             break;
         case 3:
-            ShellExecute(0, "open", "http://www.google.com", NULL, NULL, SW_SHOWDEFAULT); //steam
+            steam.open("steam.html");
+            ShellExecute(0, "open", "http://www.store.steampowered.com", NULL, NULL, SW_SHOWDEFAULT); //steam
             break;
         case 4:
-            ShellExecute(0, "open", "http://www.google.com", NULL, NULL, SW_SHOWDEFAULT); //youtube
+            yt.open("yt.html");
+            ShellExecute(0, "open", "http://www.youtube.com", NULL, NULL, SW_SHOWDEFAULT); //youtube
             break;
         case 5:
-            ShellExecute(0, "open", "http://www.google.com", NULL, NULL, SW_SHOWDEFAULT); //wildberries
+            wb.open("wb.html");
+            ShellExecute(0, "open", "http://www.wildberries.ru/", NULL, NULL, SW_SHOWDEFAULT); //wildberries
             break;
         case 6:
+            rdxr.open("rdxr.html");
             ShellExecute(0, "open", "http://www.google.com", NULL, NULL, SW_SHOWDEFAULT); //rdxr
             break;
         default:
