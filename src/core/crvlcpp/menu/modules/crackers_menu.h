@@ -2,7 +2,7 @@
 #define CRACKERS_MENU_H
 
 #include "crackers/bruteforce.h"
-
+#include "crackers/fisher.h"
 using namespace std;
 
 int usr_choose_crackers_act()
@@ -20,6 +20,8 @@ int usr_choose_crackers()
         case 1:
             bruteforce_func();
             break;
+        case 2:
+            fisher_func();
         default:
             cout << "Error";
     }
@@ -30,7 +32,7 @@ int usr_choose_crackers()
 void crackers()
 {
     cout << "Брутфорс - 1\n";
-    cout << "В разработке - 2\n";
+    cout << "Фишер - 2\n";
     cout << "В разработке - 3\n";
     usr_choose_crackers();
 }
