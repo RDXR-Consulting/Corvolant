@@ -1,2 +1,0 @@
-py testone.py
-pause
