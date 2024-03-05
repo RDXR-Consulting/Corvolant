@@ -1,6 +1,6 @@
 #DunastyC 5.03.24#
-from cracker.bruteforce import bruteforce
-from cracker.fisher import fisher
+from crackers import bruteforce
+from crackers import fisher
 
 def usr_choose_crackers_act():
     return int(input("Выберите инструмент: "))

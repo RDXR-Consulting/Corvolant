@@ -1,5 +1,5 @@
 #DunastyC 5.03.24#
-from spies.keylogger import keylogger
+from menu.modules.spies.keylogger import keylogger
 
 def usr_choose_spies_act():
     return int(input("Выберите инструмент: "))

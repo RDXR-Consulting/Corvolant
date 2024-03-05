@@ -1,4 +1,4 @@
-from useful.rundata import rundata
+from menu.modules.useful.rundata import rundata
 
 def usr_choose_useful_act():
     return int(input("Выберите инструмент: "))
