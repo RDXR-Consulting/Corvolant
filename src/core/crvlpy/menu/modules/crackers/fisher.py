@@ -28,6 +28,7 @@ def fisher_func():
     print("4) Youtube")
     print("5) Wildberries")
     print("6) RDXR")
+    print(__name__)
     fisher_func_choose()
 
-fisher_func()
+

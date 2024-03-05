@@ -9,12 +9,12 @@ def usr_choose_spies():
     if user_choose_var == 1:
         keylog.keylogger_func()
     else:
-        print("Error")
+        print('error')
+        pass
+
 
 def spies():
     print("Кейлоггер - 1")
     print("В разработке - 2")
     print("В разработке - 3")
     usr_choose_spies()
-
-spies()

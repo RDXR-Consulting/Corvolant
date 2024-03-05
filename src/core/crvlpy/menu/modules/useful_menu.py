@@ -17,5 +17,3 @@ def useful():
     print("2) В разработке\n")
     print("3) В разработке\n")
     usr_choose_useful()
-
-useful()

@@ -1,21 +1,23 @@
-from menu.modules.crackers_menu import crackers
-from menu.modules.miners_menu import miners
-from menu.modules.spies_menu import spies
-from menu.modules.useful_menu import useful
+from menu.modules import crackers_menu
+from menu.modules import miners_menu
+from menu.modules import spies_menu
+from menu.modules import useful_menu
 def usr_choose_menu_act():
-    return(input(int("Выберите раздел:\n")))
+    print("Выберите раздел:")
+    menu_act = input()
+    return int(menu_act)
 
 
 def usr_choose_menu():
     user_choose_var = usr_choose_menu_act()
     if user_choose_var == 1:
-        crackers()
+        crackers_menu.crackers()
     if user_choose_var == 2:
-        miners()
+        miners_menu.miners()
     if user_choose_var == 3:
-        spies()
+        spies_menu.spies()
     if user_choose_var == 4:
-        useful()
+        useful_menu.useful()
 
 
 def menu():

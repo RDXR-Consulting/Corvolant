@@ -19,5 +19,3 @@ def crackers():
     print("Фишер - 2")
     print("В разработке - 3")
     usr_choose_crackers()
-
-crackers()
