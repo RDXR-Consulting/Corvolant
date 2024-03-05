@@ -1,5 +1,5 @@
 #DunastyC 5.03.24#
-from menu.modules.spies.keylogger import keylogger
+from menu.modules.spies import keylogger as keylog
 
 def usr_choose_spies_act():
     return int(input("Выберите инструмент: "))
@@ -7,7 +7,7 @@ def usr_choose_spies_act():
 def usr_choose_spies():
     user_choose_var = usr_choose_spies_act()
     if user_choose_var == 1:
-        keylogger()
+        keylog.keylogger_func()
     else:
         print("Error")
 

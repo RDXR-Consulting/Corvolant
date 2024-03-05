@@ -1,20 +1,20 @@
-from menu.modules.crackers import crackers
+from menu.modules.crackers_menu import crackers
 from menu.modules.miners_menu import miners
 from menu.modules.spies_menu import spies
 from menu.modules.useful_menu import useful
 def usr_choose_menu_act():
-    usr_choose_menu = input(int("Выберите раздел:\n"))
-    return usr_choose_menu
+    return(input(int("Выберите раздел:\n")))
 
 
 def usr_choose_menu():
-    if usr_choose_menu()== 1:
+    user_choose_var = usr_choose_menu_act()
+    if user_choose_var == 1:
         crackers()
-    if usr_choose_menu() == 2:
+    if user_choose_var == 2:
         miners()
-    if usr_choose_menu() == 3:
+    if user_choose_var == 3:
         spies()
-    if usr_choose_menu() == 4:
+    if user_choose_var == 4:
         useful()
 
 

@@ -1,8 +1,11 @@
-
 from menu import main_menu
-from menu.main_menu import usr_choose_menu_act
 
+print('1')
 
 def main():
     print("Приветствие")
-    usr_choose_menu_act()
+    main_menu.menu()
+if __name__ == "__main__":
+    main()
+else:
+    print("FATAL ERROR")
