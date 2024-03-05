@@ -1,2 +1,0 @@
-py crvl.py
-pause
