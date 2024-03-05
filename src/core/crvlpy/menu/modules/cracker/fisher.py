@@ -1,2 +1,0 @@
-def fisher():
-	print("fisher")
