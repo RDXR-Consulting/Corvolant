@@ -1,0 +1,2 @@
+def bruteforce():
+	print("bruteforce")

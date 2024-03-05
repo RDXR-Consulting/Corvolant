@@ -1,11 +1,12 @@
+from useful.rundata import rundata
+
 def usr_choose_useful_act():
-        print("Выберите инструмент: ")
-        useful()
+    return int(input("Выберите инструмент: "))
 
 def usr_choose_useful():
     user_choice_var = usr_choose_useful_act()
     if user_choice_var == 1:
-        pass
+        rundata()
     if user_choice_var == 2:
         pass
     if user_choice_var == 3:
@@ -16,3 +17,5 @@ def useful():
     print("2) В разработке\n")
     print("3) В разработке\n")
     usr_choose_useful()
+
+useful()

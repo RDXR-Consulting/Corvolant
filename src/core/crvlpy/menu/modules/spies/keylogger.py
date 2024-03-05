@@ -1,1 +1,2 @@
-lala
+def keylogger():
+    print("◕⩊◕")
