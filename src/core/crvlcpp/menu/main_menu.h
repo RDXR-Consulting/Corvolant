@@ -6,11 +6,10 @@
 #include "modules/spies_menu.h"
 #include "modules/useful_menu.h"
 
-using namespace std;
 
 int usr_choose_menu_act()
 {
-  cout << "Выберите раздел: ";
+  std::cout << "Выберите раздел: ";
   int usr_choose_menu_var; cin >> usr_choose_menu_var; cin.ignore(32767, '\n');
   return usr_choose_menu_var;
 }
@@ -18,20 +17,26 @@ int usr_choose_menu_act()
 int usr_choose_menu()
 {
   int user_choose_var = usr_choose_menu_act();
-  switch(user_choose_var)
-    {
-      case 1:
-        crackers();
-        break;
-      case 2:
-        miners();
-        break;
-      case 3:
-        spies();
-        break;
-      default:
-        std::cout << "Error";
-    }
+  if(user_choose_var ==1)
+  {
+      crackers();
+  }
+  if(user_choose_var ==2)
+  {
+      miners();
+  }
+  if(user_choose_var ==3)
+  {
+      spies();
+  }
+  if(user_choose_var ==4)
+  {
+      useful();
+  }
+  else
+  {
+      std::cout << "Error";
+  }
     return 0;
 }
 
@@ -39,11 +44,11 @@ int usr_choose_menu()
 int menu()
 {
   //gui - запуск
-  cout << "ГЛАВНОЕ МЕНЮ\n";
-  cout << "1) Взломщики\n";
-  cout << "2) Майнеры\n";
-  cout << "3) Шпионы\n";
-  cout << "4) Полезное\n";
+  std::cout << "ГЛАВНОЕ МЕНЮ\n";
+  std::cout << "1) Взломщики\n";
+  std::cout << "2) Майнеры\n";
+  std::cout << "3) Шпионы\n";
+  std::cout << "4) Полезное\n";
   usr_choose_menu();
   return 0;
 }
