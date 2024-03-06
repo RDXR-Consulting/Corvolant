@@ -1,13 +1,8 @@
 # Corvolant
-<h3 align="center">
-<br>
 
-![crvlSq](https://github.com/RDXR-Consulting/Corvolant/assets/143093093/cb62f60c-6051-414d-828a-82ff7f299333)
+ВСТАВИТЬ СЮДА ФОТО
 
-
-A simple application for those who never FORGET
-<br>
-</h3>
+ДЕВИЗ 
 
 -----
  
