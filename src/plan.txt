@@ -3,6 +3,7 @@ radixliura:
 
 cyclopus:
 1) Быть крутым
+2) Сделать дерево проекта
 
 dunastyc:
 1.1) Загрузить лого в readme
