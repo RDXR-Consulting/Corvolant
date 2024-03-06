@@ -3,28 +3,29 @@
 
 #include "crackers/bruteforce.h"
 #include "crackers/fisher.h"
-using namespace std;
+
 
 int usr_choose_crackers_act()
 {
-    cout << "Выберите инструмент: ";
-    int usr_choose_crackers_var; cin >> usr_choose_crackers_var; cin.ignore(32767, '\n');
+    std::cout << "Выберите инструмент: ";
+    int usr_choose_crackers_var;  std::cin >> usr_choose_crackers_var;  std::cin.ignore(32767, '\n');
     return usr_choose_crackers_var;
 }
 
 int usr_choose_crackers()
 {
     int user_choose_var = usr_choose_crackers_act();
-    switch(user_choose_var)
+    if(user_choose_var == 1)
     {
-        case 1:
-            bruteforce_func();
-            break;
-        case 2:
-            fisher_func();
-        break;
-        default:
-            cout << "Error";
+        bruteforce_func();
+    }
+    if(user_choose_var == 2)
+    {
+        fisher_func();
+    }
+    else
+    {
+        std::cout << "Error";
     }
     return 0;
 }
@@ -32,9 +33,9 @@ int usr_choose_crackers()
 
 void crackers()
 {
-    cout << "Брутфорс - 1\n";
-    cout << "Фишер - 2\n";
-    cout << "В разработке - 3\n";
+    std::cout << "Брутфорс - 1\n";
+    std::cout << "Фишер - 2\n";
+    std::cout << "В разработке - 3\n";
     usr_choose_crackers();
 }
 
