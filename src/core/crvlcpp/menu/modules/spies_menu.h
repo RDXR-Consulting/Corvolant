@@ -14,8 +14,14 @@ int usr_choose_spies_act()
 int usr_choose_spies()
 {
     int usr_choose_var = usr_choose_spies_act();
-    if(usr_choose_var == 1){keylogger_func();}
-    else{std::cout << "Error";}
+    if(usr_choose_var == 1)
+    {
+        keylogger_func();
+    }
+    else
+    {
+        std::cout << "Error";
+    }
     return 0;
 }
 
