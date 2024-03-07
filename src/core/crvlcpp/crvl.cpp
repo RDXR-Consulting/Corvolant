@@ -1,14 +1,8 @@
-// Стандартные библиотеки
 #include <iostream>
 
-// Пользовательские библиотеки
 #include "menu/main_menu.h"
 
 using namespace std;
-
-
-// Пространства имен
-
 
 int main()
 {
