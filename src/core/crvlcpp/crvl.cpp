@@ -1,6 +1,5 @@
 // Стандартные библиотеки
 #include <iostream>
-#include <windows.h>
 
 // Пользовательские библиотеки
 #include "menu/main_menu.h"
