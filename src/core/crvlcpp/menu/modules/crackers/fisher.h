@@ -1,5 +1,6 @@
 #ifndef FISHER_H
 #define FISHER_H
+#include <fstream>
 
 //system("start iexplore.exe \"www.cyberforum.ru\""); - мб пойдет как открывашка
 
@@ -23,28 +24,28 @@ int fisher_func_choose()
     switch(usr_choose_var)
     {
         case 1:
-            vk.open("vk.txt");
-            ShellExecute(0, "open", "http://www.vk.com", NULL, NULL, SW_SHOWDEFAULT); //inst
+            vk.open("fisher_html/vk.html");
+            ShellExecute(nullptr, "open", "https://www.vk.com", nullptr, nullptr, SW_SHOWDEFAULT); //vk
             break;
         case 2:
-            inst.open("inst.html");
-            ShellExecute(0, "open", "http://www.instagram.com", NULL, NULL, SW_SHOWDEFAULT); //inst
+            inst.open("fisher_html/inst.html");
+            ShellExecute(nullptr, "open", "https://www.instagram.com", nullptr, nullptr, SW_SHOWDEFAULT); //inst
             break;
         case 3:
-            steam.open("steam.html");
-            ShellExecute(0, "open", "http://www.store.steampowered.com", NULL, NULL, SW_SHOWDEFAULT); //steam
+            steam.open("fisher_html/steam.html");
+            ShellExecute(nullptr, "open", "https://www.store.steampowered.com", nullptr, nullptr, SW_SHOWDEFAULT); //steam
             break;
         case 4:
-            yt.open("yt.html");
-            ShellExecute(0, "open", "http://www.youtube.com", NULL, NULL, SW_SHOWDEFAULT); //youtube
+            yt.open("fisher_html/yt.html");
+            ShellExecute(nullptr, "open", "https://www.youtube.com", nullptr, nullptr, SW_SHOWDEFAULT); //youtube
             break;
         case 5:
-            wb.open("wb.html");
-            ShellExecute(0, "open", "http://www.wildberries.ru/", NULL, NULL, SW_SHOWDEFAULT); //wildberries
+            wb.open("fisher_html/wb.html");
+            ShellExecute(nullptr, "open", "https://www.wildberries.ru/", nullptr, nullptr, SW_SHOWDEFAULT); //wildberries
             break;
         case 6:
-            rdxr.open("rdxr.html");
-            ShellExecute(0, "open", "http://www.google.com", NULL, NULL, SW_SHOWDEFAULT); //rdxr
+            rdxr.open("fisher_html/rdxr.html");
+            ShellExecute(nullptr, "open", "https://www.google.com", nullptr, nullptr, SW_SHOWDEFAULT); //rdxr
             break;
         default:
             std::cout << "Error";
@@ -54,13 +55,17 @@ int fisher_func_choose()
 
 int fisher_func()
 {
-    std::cout << "Выберите сайт:\n";
-    std::cout << "1) VK\n";
-    std::cout << "2) Instagram\n";
-    std::cout << "3) Steam\n";
-    std::cout << "4) Youtube\n";
-    std::cout << "5) Wildberries\n";
-    std::cout << "6) RDXR\n";
+    std::cout <<"\n╭────────────────────────────────────────────╮\n";
+    std::cout <<"│                ВЫБЕРИТЕ САЙТ               │\n";
+    std::cout <<"│============================================│\n";
+    std::cout <<"│ 1) VK                                      │\n";
+    std::cout <<"│ 2) Instagramm                              │\n";
+    std::cout <<"│ 4) Steam                                   │\n";
+    std::cout <<"│ 5) Youtube                                 │\n";
+    std::cout <<"│ 6) Wildberries                             │\n";
+    std::cout <<"│ 3) RDXR                                    │\n";
+    std::cout <<"│                                            │\n";
+    std::cout <<"╰────────────────────────────────────────────╯\n";
     fisher_func_choose();
     return 0;
 }
