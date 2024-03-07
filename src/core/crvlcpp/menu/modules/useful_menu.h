@@ -4,6 +4,7 @@
 #include "useful/randata.h"
 
 
+
 int usr_choose_useful_act()
 {
     std::cout << "Выберите инструмент: ";
@@ -27,13 +28,19 @@ int usr_choose_useful()
 }
 
 
-void useful() 
-{             
-    std::cout << "Случайные данные - 1\n";
-    std::cout << "В разработке - 2\n";
-    std::cout << "В разработке - 3\n";
-  usr_choose_useful();
+void useful()
+{
+    std::cout <<"\n╭────────────────────────────────────────────╮\n";
+    std::cout <<"│               П О Л Е З Н О Е              │\n";
+    std::cout <<"│============================================│\n";
+    std::cout <<"│ 1) Случайные данные                        │\n";
+    std::cout <<"│ 2) В разработке                            │\n";
+    std::cout <<"│ 3) В разработке                            │\n";
+    std::cout <<"│                                            │\n";
+    std::cout <<"╰────────────────────────────────────────────╯\n";
+    usr_choose_useful();
 }
 
 
 #endif
+
