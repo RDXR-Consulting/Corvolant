@@ -1,2 +1,2 @@
 def keylogger_func():
-    print("◕⩊◕")
+    pass

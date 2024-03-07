@@ -15,7 +15,12 @@ def usr_choose_crackers():
         print("Error")
 
 def crackers():
-    print("Брутфорс - 1")
-    print("Фишер - 2")
-    print("В разработке - 3")
+    print("╭────────────────────────────────────────────╮")
+    print("│             В З Л О М Щ И К И              │")
+    print("│                                            │")
+    print("│ 1) Брутфорс                                │")
+    print("│ 2) Фишер                                   │")
+    print("│ 3) В разработке                            │")
+    print("│                                            │")
+    print("╰────────────────────────────────────────────╯\n")
     usr_choose_crackers()
