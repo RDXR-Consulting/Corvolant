@@ -1,0 +1,7 @@
+baza
+1. Osnova dizayna - menu nastroek iz macos
+
+
+keygen
+1. Vvod dlini parrolya s pomoshyu polzunka + ostavit vozmojnost vvesti dlinu palchikami
+2. Ukazivat nujni li v parole vsyakie zagagulins (specsimvoli) s pomosh`u perekluchatelya (vikl-vkl) ili prostoy knopkoy
