@@ -1,46 +1,43 @@
-#ifndef USEFUL_MENU_H
-#define USEFUL_MENU_H
+#ifndef SPIES_MENU_H
+#define SPIES_MENU_H
 
-#include "useful/randata.h"
+#include "spies/keylogger.h"
 
 
-
-int usr_choose_useful_act()
+int usr_choose_spies_act()
 {
     std::cout << "Выберите инструмент: ";
-    int usr_choose_useful_var; std::cin >> usr_choose_useful_var; cin.ignore(32767, '\n');
-    return usr_choose_useful_var;
+    int usr_choose_spies_var;  std::cin >> usr_choose_spies_var; cin.ignore(32767, '\n');
+    return usr_choose_spies_var;
 }
 
-int usr_choose_useful()
+int usr_choose_spies()
 {
-    int user_choose_var = usr_choose_useful_act();
-    if(user_choose_var == 1)
+    int usr_choose_var = usr_choose_spies_act();
+    if(usr_choose_var == 1)
     {
-        randata_func();
+        keylogger_func();
     }
     else
     {
         std::cout << "Error";
     }
-
     return 0;
 }
 
 
-void useful()
+void spies()
 {
     std::cout <<"\n╭────────────────────────────────────────────╮\n";
-    std::cout <<"│               П О Л Е З Н О Е              │\n";
+    std::cout <<"│                  Ш П И О Н Ы               │\n";
     std::cout <<"│============================================│\n";
-    std::cout <<"│ 1) Случайные данные                        │\n";
+    std::cout <<"│ 1) Кейлоггер                               │\n";
     std::cout <<"│ 2) В разработке                            │\n";
     std::cout <<"│ 3) В разработке                            │\n";
     std::cout <<"│                                            │\n";
     std::cout <<"╰────────────────────────────────────────────╯\n";
-    usr_choose_useful();
+    usr_choose_spies();
 }
 
 
 #endif
-
