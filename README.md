@@ -10,13 +10,7 @@
 - Брутфорс
 - Cross platform
 
-
-## Roadmap
-
-- Additional browser support
-
-- Add more integrations
-
+![Screen](https://github.com/RDXR-Consulting/Corvolant/assets/104996756/cefd055f-83bf-4fbb-8ce9-3bf703d2fc02)
 
 ## Documentation
 
