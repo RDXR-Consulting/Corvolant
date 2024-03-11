@@ -10,7 +10,6 @@
 - Брутфорс
 - Cross platform
 
-![Screen](https://github.com/RDXR-Consulting/Corvolant/assets/104996756/cefd055f-83bf-4fbb-8ce9-3bf703d2fc02)
 
 ## Documentation
 
@@ -19,7 +18,7 @@
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=CRVL+Screenshot)
+![Screen](https://github.com/RDXR-Consulting/Corvolant/assets/104996756/cefd055f-83bf-4fbb-8ce9-3bf703d2fc02)
 
 
 ## FAQ
