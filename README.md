@@ -32,6 +32,26 @@ Corvolant доступен на Windows
 - [@backDoora](https://github.com/backDoora)
 
 
+
+
+Установка
+sudo systemctl start postgresql
+sudo service postgresql start
+sudo passwd postgres -> "12345"
+su -l postgres -> "12345"
+psql
+CREATE USER crvlhost WITH password 'crvlpass';
+CREATE DATABASE crvldb;
+\c crvldb
+CREATE TABLE keys( id SERIAL PRIMARY KEY, lang CHARACTER VARYING(30), register INTEGER );
+GRANT ALL PRIVILEGES ON DATABASE crvldb to crvlhost;
+GRANT ALL ON keys TO crvlhost;
+\q
+exit
+clear
+
+
+
 ## Feedback
 
 Если у вас есть какие-либо отзывы, пожалуйста, свяжитесь с нами по адресу crvl.com
