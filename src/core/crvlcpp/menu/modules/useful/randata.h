@@ -11,7 +11,7 @@
 #include <ctime>
 #include <cstdlib>
 
-using namespace std;
+
 
 
 int randata_func()
