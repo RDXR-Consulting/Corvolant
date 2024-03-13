@@ -18,23 +18,7 @@
 ![Screen](https://github.com/RDXR-Consulting/Corvolant/assets/104996756/cefd055f-83bf-4fbb-8ce9-3bf703d2fc02)
 
 
-## FAQ
-
-#### 1) На каких OS доступна программа?
-
-Corvolant доступен на Windows
-
-
-## Authors
-
-- [@radixiura](https://github.com/radixiura)
-- [@DunastyCode](https://www.github.com/dunastycode)
-- [@backDoora](https://github.com/backDoora)
-
-
-
-
-Установка
+## Установка
 sudo systemctl start postgresql
 sudo service postgresql start
 sudo passwd postgres -> "12345"
@@ -50,6 +34,19 @@ GRANT ALL ON keys TO crvlhost;
 exit
 clear
 
+
+## FAQ
+
+#### 1) На каких OS доступна программа?
+
+Corvolant доступен на Windows
+
+
+## Authors
+
+- [@radixiura](https://github.com/radixiura)
+- [@DunastyCode](https://www.github.com/dunastycode)
+- [@backDoora](https://github.com/backDoora)
 
 
 ## Feedback
