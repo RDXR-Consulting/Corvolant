@@ -19,6 +19,7 @@
 
 
 ## Установка
+```bash
 sudo systemctl start postgresql
 sudo service postgresql start
 sudo passwd postgres -> "12345"
@@ -33,7 +34,7 @@ GRANT ALL ON keys TO crvlhost;
 \q
 exit
 clear
-
+```
 
 ## FAQ
 
