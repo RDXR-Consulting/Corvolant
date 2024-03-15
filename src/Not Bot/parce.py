@@ -34,7 +34,7 @@ async def check_repo(bot: Bot):
                 time = commits[0]['commit']['author']['date']
                 data['new_commit'].append({
                     'author': author,
-                    'file': file,
+                    'file': commit ,
                     'time': time})
                 date_string = data['new_commit'][0]['time']
                 date_parts = date_string.split("T")
