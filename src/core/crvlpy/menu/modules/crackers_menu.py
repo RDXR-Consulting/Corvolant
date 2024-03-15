@@ -2,6 +2,7 @@
 from menu.modules.crackers import bruteforce as brut
 from menu.modules.crackers import fisher as fish
 
+
 def usr_choose_crackers_act():
     return int(input("Выберите инструмент: "))
 
