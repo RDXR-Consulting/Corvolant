@@ -1,4 +1,3 @@
-
 #ifndef CRVL_KEYGEN_H
 #define CRVL_KEYGEN_H
 
@@ -33,18 +32,18 @@ std::string lc_dictionary[25] = // нРег
                 sb17, sb18, sb19, sb20, sb21, sb22, sb23, sb24
         };
 
-std::string uc_dictionary[25] =
+std::string uc_dictionary[25] = // вРег
         {
                 u_sb0, u_sb1, u_sb2, u_sb3, u_sb4, u_sb5, u_sb6, u_sb7, u_sb8, u_sb9, u_sb10, u_sb11, u_sb12,
                 u_sb13, u_sb14, u_sb15, u_sb16, u_sb17, u_sb18, u_sb19, u_sb20, u_sb21, u_sb22, u_sb23, u_sb24
         };
 
-std::string n_Dictionary[10] =
+std::string n_dictionary[10] = // цифр
         {
                 nb0, nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8, nb9
         };
 
-std::string ss_dictionary[30] =
+std::string ss_dictionary[30] = // спецСимвол
         {
                 sp, dr, pt, ad, qtMk, oPs, cOps, cOps, sr, ps, cma, mn, dt, sh, oSqrBt, cSqrBt, cn, sn, msn,
                 lts, qMk, els, at, dgr, ulg, ahe, oBc, cBc, cr, tde
@@ -169,10 +168,6 @@ int upperCase_switch;
 int numbers_switch;
 int specialSymbol_switch;
 
-int dictionary[4];
-
-std::string dictionary_list[4] = {"Нижний регистр: ", "\nВерхний регистр: ", "\nЦифры: ", "\nСпециальные символы: "};
-
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - Генератор паролей - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
@@ -187,6 +182,38 @@ int lc_keygen() // нРег
     }
 }
 
+int uc_keygen() // вРег
+{
+    srand(time(nullptr));
+
+    for(int i = 0; i < pwd_length; i++)
+    {
+        password[i] = uc_dictionary[rand() % 25];
+        std::cout << password[i];
+    }
+}
+
+int n_keygen() // цифр
+{
+    srand(time(nullptr));
+
+    for(int i = 0; i < pwd_length; i++)
+    {
+        password[i] = n_dictionary[rand() % 25];
+        std::cout << password[i];
+    }
+}
+
+int ss_keygen() // цифр
+{
+    srand(time(nullptr));
+
+    for(int i = 0; i < pwd_length; i++)
+    {
+        password[i] = ss_dictionary[rand() % 25];
+        std::cout << password[i];
+    }
+}
 
 int lcUc_keygen() // нРег + вРег
 {
@@ -227,7 +254,7 @@ int lcUcN_Keygen() // нРег + вРег + цифр
 
     for(int i = 0; i < pwd_length; i++)
     {
-        password[i] = lcUcNSs_dictionary[rand() % 60];
+        password[i] = lcUcN_dictionary[rand() % 60];
         std::cout << password[i];
     }
 }
@@ -260,7 +287,7 @@ int ucN_keygen() // нРег + цифр
 
     for(int i = 0; i < pwd_length; i++)
     {
-        password[i] = lcN_dictionary[rand() % 35];
+        password[i] = ucN_dictionary[rand() % 35];
         std::cout << password[i];
     }
 }
@@ -300,7 +327,7 @@ int lcUcNSs_keygen() // нРег + вРег + цифр + спецСимвл
     return 0;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - Обработка ввода пользователья - - - - - - - - - - - - - - - - - - - - - - - - - //
+// - - - - - - - - - - - - - - - - - - - - - - - Обработка ввода пользователя - - - - - - - - - - - - - - - - - - - - - - - - - //
 int usr_choose_keygen()
 {
 
@@ -310,6 +337,22 @@ int usr_choose_keygen()
     {
         lc_keygen();
     }
+
+    else if(upperCase_switch == 1) // вРег
+    {
+        uc_keygen();
+    }
+
+    else if(numbers_switch == 1) // цифр
+    {
+        n_keygen();
+    }
+
+    else if(specialSymbol_switch == 1) // спецСимв
+    {
+        ss_keygen();
+    }
+
 
     else if(lowerCase_switch == 1 && upperCase_switch == 1) // нРег + вРег
     {
@@ -372,10 +415,10 @@ int usr_choose_keygen_act()
 {
     std::cout << "Укажите длину пароля: "; std:: cin >> pwd_length; // Ввод длины пароля
 
-    std::cout << "\nУкажите используемые символы\n 0 - не использовать, 1 - использовать \n"; // Ввод символов, используемых в пароле
+    std::cout << "Укажите используемые символы\n 0 - не использовать, 1 - использовать \n"; // Ввод символов, используемых в пароле
 
-    std::cout << "Нижний регистр: "; std::cin >> lowerCase_switch;
-    std::cout << "\nВерхний регистр: "; std::cin >> upperCase_switch;
+    std::cout << "Символы в нижнем регистре: "; std::cin >> lowerCase_switch;
+    std::cout << "\nСимволы в верхнем регистре: "; std::cin >> upperCase_switch;
     std::cout << "\nЦифры: "; std::cin >> numbers_switch;
     std::cout << "\nСпециальные символы: "; std::cin >> specialSymbol_switch;
 
@@ -385,7 +428,6 @@ int keygen_func()
 {
     usr_choose_keygen_act();
     usr_choose_keygen();
-
 
     return 0;
 }
