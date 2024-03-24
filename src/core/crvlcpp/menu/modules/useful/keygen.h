@@ -330,14 +330,11 @@ int lcUcNSs_keygen() // нРег + вРег + цифр + спецСимвл
 int usr_choose_keygen_act()
 {
     std::cout << "Укажите длину пароля: "; std:: cin >> pwd_length; // Ввод длины пароля
-
     std::cout << "Укажите используемые символы\n 0 - не использовать, 1 - использовать \n"; // Ввод символов, используемых в пароле
-
     std::cout << "Символы в нижнем регистре: "; std::cin >> lowerCase_switch;
     std::cout << "\nСимволы в верхнем регистре: "; std::cin >> upperCase_switch;
     std::cout << "\nЦифры: "; std::cin >> numbers_switch;
     std::cout << "\nСпециальные символы: "; std::cin >> specialSymbol_switch;
-
 }
 
 
@@ -365,7 +362,6 @@ int usr_choose_keygen()
     {
         ss_keygen();
     }
-
 
     else if(lowerCase_switch == 1 && upperCase_switch == 1) // нРег + вРег
     {
