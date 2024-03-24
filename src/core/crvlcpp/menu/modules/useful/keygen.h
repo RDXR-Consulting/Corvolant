@@ -327,10 +327,23 @@ int lcUcNSs_keygen() // нРег + вРег + цифр + спецСимвл
     return 0;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - Обработка ввода пользователя - - - - - - - - - - - - - - - - - - - - - - - - - //
+int usr_choose_keygen_act()
+{
+    std::cout << "Укажите длину пароля: "; std:: cin >> pwd_length; // Ввод длины пароля
+
+    std::cout << "Укажите используемые символы\n 0 - не использовать, 1 - использовать \n"; // Ввод символов, используемых в пароле
+
+    std::cout << "Символы в нижнем регистре: "; std::cin >> lowerCase_switch;
+    std::cout << "\nСимволы в верхнем регистре: "; std::cin >> upperCase_switch;
+    std::cout << "\nЦифры: "; std::cin >> numbers_switch;
+    std::cout << "\nСпециальные символы: "; std::cin >> specialSymbol_switch;
+
+}
+
+
 int usr_choose_keygen()
 {
-
+    cout << "обсада";
     // !!! сделать оповещение о некорректном вводе !!!
 
     if(lowerCase_switch == 1) // нРег
@@ -410,20 +423,6 @@ int usr_choose_keygen()
     }
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - Ввод пользователя - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-int usr_choose_keygen_act()
-{
-    std::cout << "Укажите длину пароля: "; std:: cin >> pwd_length; // Ввод длины пароля
-
-    std::cout << "Укажите используемые символы\n 0 - не использовать, 1 - использовать \n"; // Ввод символов, используемых в пароле
-
-    std::cout << "Символы в нижнем регистре: "; std::cin >> lowerCase_switch;
-    std::cout << "\nСимволы в верхнем регистре: "; std::cin >> upperCase_switch;
-    std::cout << "\nЦифры: "; std::cin >> numbers_switch;
-    std::cout << "\nСпециальные символы: "; std::cin >> specialSymbol_switch;
-
-}
-
 int keygen_func()
 {
     usr_choose_keygen_act();
@@ -431,8 +430,5 @@ int keygen_func()
 
     return 0;
 }
-
-
-
 
 #endif
