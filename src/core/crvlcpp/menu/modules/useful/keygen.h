@@ -160,171 +160,13 @@ std::string lcUcNSs_dictionary[90] = //нРег + вРег + цифр + спец
                 lts, qMk, els, at, dgr, ulg, ahe, oBc, cBc, cr, tde
         };
 
-int pwd_length; // Длина пароля
-std::string password[0];
+
 
 
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - Генератор паролей - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
-int lc_keygen() // нРег
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = lc_dictionary[rand() % 25];
-        std::cout << password[i];
-    }
-}
-
-int uc_keygen() // вРег
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = uc_dictionary[rand() % 25];
-        std::cout << password[i];
-    }
-}
-
-int n_keygen() // цифр
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = n_dictionary[rand() % 25];
-        std::cout << password[i];
-    }
-}
-
-int ss_keygen() // цифр
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = ss_dictionary[rand() % 25];
-        std::cout << password[i];
-    }
-}
-
-int lcUc_keygen() // нРег + вРег
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = lcUc_dictionary[rand() % 50];
-        std::cout << password[i];
-    }
-}
-
-int lcN_keygen() // нРег + цифр
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = lcN_dictionary[rand() % 35];
-        std::cout << password[i];
-    }
-}
-
-int lcSs_keygen() // нРег + спецСмвл
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = lcSs_dictionary[rand() % 55];
-        std::cout << password[i];
-    }
-}
-
-int lcUcN_Keygen() // нРег + вРег + цифр
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = lcUcN_dictionary[rand() % 60];
-        std::cout << password[i];
-    }
-}
-
-int lcUcSs_keygen() // нРег + вРег + спецСмвл
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = lcUcSs_dictionary[rand() % 80];
-        std::cout << password[i];
-    }
-}
-
-int lcNSs_keygen() //нРег + цифр + спецСмвл
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = lcNSs_dictionary[rand() % 65];
-        std::cout << password[i];
-    }
-}
-
-int ucN_keygen() // нРег + цифр
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = ucN_dictionary[rand() % 35];
-        std::cout << password[i];
-    }
-}
-
-int ucSs_keygen() // вРег + спецСмвл
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = ucSs_dictionary[rand() % 55];
-        std::cout << password[i];
-    }
-}
-
-int ucNSs_keygen() // вРег + цифр + спецСимвл
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = ucNSs_dictionary[rand() % 65];
-        std::cout << password[i];
-    }
-}
-
-int lcUcNSs_keygen() // нРег + вРег + цифр + спецСимвл
-{
-    srand(time(nullptr));
-
-    for(int i = 0; i < pwd_length; i++)
-    {
-        password[i] = lcUcNSs_dictionary[rand() % 90];
-        std::cout << password[i];
-    }
-
-    return 0;
-}
-
-//------------------------
 
 int usr_choose_keygen_act_length()
 {
@@ -362,11 +204,183 @@ int usr_choose_keygen_act_specsyms()
     return usr_choose_keygen_specsyms;
 }
 
+int lc_keygen() // нРег
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = lc_dictionary[rand() % 25];
+        std::cout << password[i];
+    }
+}
+
+int uc_keygen() // вРег
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = uc_dictionary[rand() % 25];
+        std::cout << password[i];
+    }
+}
+
+int n_keygen() // цифр
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = n_dictionary[rand() % 25];
+        std::cout << password[i];
+    }
+}
+
+int ss_keygen() // цифр
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = ss_dictionary[rand() % 25];
+        std::cout << password[i];
+    }
+}
+
+int lcUc_keygen() // нРег + вРег
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = lcUc_dictionary[rand() % 50];
+        std::cout << password[i];
+    }
+}
+
+int lcN_keygen() // нРег + цифр
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = lcN_dictionary[rand() % 35];
+        std::cout << password[i];
+    }
+}
+
+int lcSs_keygen() // нРег + спецСмвл
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = lcSs_dictionary[rand() % 55];
+        std::cout << password[i];
+    }
+}
+
+int lcUcN_Keygen() // нРег + вРег + цифр
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = lcUcN_dictionary[rand() % 60];
+        std::cout << password[i];
+    }
+}
+
+int lcUcSs_keygen() // нРег + вРег + спецСмвл
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = lcUcSs_dictionary[rand() % 80];
+        std::cout << password[i];
+    }
+}
+
+int lcNSs_keygen() //нРег + цифр + спецСмвл
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = lcNSs_dictionary[rand() % 65];
+        std::cout << password[i];
+    }
+}
+
+int ucN_keygen() // нРег + цифр
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = ucN_dictionary[rand() % 35];
+        std::cout << password[i];
+    }
+}
+
+int ucSs_keygen() // вРег + спецСмвл
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = ucSs_dictionary[rand() % 55];
+        std::cout << password[i];
+    }
+}
+
+int ucNSs_keygen() // вРег + цифр + спецСимвл
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = ucNSs_dictionary[rand() % 65];
+        std::cout << password[i];
+    }
+}
+
+int lcUcNSs_keygen() // нРег + вРег + цифр + спецСимвл
+{
+    srand(time(nullptr));
+    int usr_choose_length = usr_choose_keygen_act_length();
+    std::string password [usr_choose_length];
+    for(int i = 0; i < usr_choose_length; i++)
+    {
+        password[i] = lcUcNSs_dictionary[rand() % 90];
+        std::cout << password[i];
+
+    }
+
+    return 0;
+}
+
+//------------------------
 
 int usr_choose_keygen()
 {
     cout << "обсада";
-    int usr_choose_length = usr_choose_keygen_act_length();     // длина пароля
+
     int usr_choose_lowcase = usr_choose_keygen_act_lowcase();   // нРег
     int usr_choose_upcase = usr_choose_keygen_act_upcase();     // вРег
     int usr_choose_nums = usr_choose_keygen_act_nums();         // цифр
