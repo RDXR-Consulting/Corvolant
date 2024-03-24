@@ -163,10 +163,7 @@ std::string lcUcNSs_dictionary[90] = //нРег + вРег + цифр + спец
 int pwd_length; // Длина пароля
 std::string password[0];
 
-int lowerCase_switch;
-int upperCase_switch;
-int numbers_switch;
-int specialSymbol_switch;
+
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - Генератор паролей - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -369,11 +366,11 @@ int usr_choose_keygen_act_specsyms()
 int usr_choose_keygen()
 {
     cout << "обсада";
-    int usr_choose_length = usr_choose_keygen_act_length();
-    int usr_choose_lowcase = usr_choose_keygen_act_lowcase();
-    int usr_choose_upcase = usr_choose_keygen_act_upcase();
-    int usr_choose_nums = usr_choose_keygen_act_nums();
-    int usr_choose_specsyms = usr_choose_keygen_act_specsyms();
+    int usr_choose_length = usr_choose_keygen_act_length();     // длина пароля
+    int usr_choose_lowcase = usr_choose_keygen_act_lowcase();   // нРег
+    int usr_choose_upcase = usr_choose_keygen_act_upcase();     // вРег
+    int usr_choose_nums = usr_choose_keygen_act_nums();         // цифр
+    int usr_choose_specsyms = usr_choose_keygen_act_specsyms(); // спецСимв
 
     if(usr_choose_lowcase == 1)
     {
@@ -400,47 +397,47 @@ int usr_choose_keygen()
         lcUc_keygen();
     }
 
-    else if(lowerCase_switch == 1 && numbers_switch == 1) // нРег + цифр
+    else if(usr_choose_lowcase == 1 && usr_choose_nums == 1) // нРег + цифр
     {
         lcN_keygen();
     }
 
-    else if(lowerCase_switch == 1 && specialSymbol_switch == 1) //нРег + спецСимвол
+    else if(usr_choose_lowcase == 1 && usr_choose_specsyms == 1) //нРег + спецСимвол
     {
         lcSs_keygen();
     }
 
-    else if(lowerCase_switch == 1 && upperCase_switch == 1 && numbers_switch == 1) // нРег + вРег + цифр
+    else if(usr_choose_lowcase == 1 && usr_choose_upcase == 1 && usr_choose_nums == 1) // нРег + вРег + цифр
     {
         lcUcN_Keygen();
     }
 
-    else if(lowerCase_switch == 1 && upperCase_switch == 1 && specialSymbol_switch == 1) //нРег + вРег + спецСимвол
+    else if(usr_choose_lowcase == 1 && usr_choose_upcase == 1 && usr_choose_specsyms == 1) //нРег + вРег + спецСимвол
     {
         lcUcSs_keygen();
     }
 
-    else if(lowerCase_switch == 1 && upperCase_switch == 1 && specialSymbol_switch == 1) // нРег + цифр + спецСимвол
+    else if(usr_choose_lowcase == 1 && usr_choose_upcase == 1 && usr_choose_specsyms == 1) // нРег + цифр + спецСимвол
     {
         lcNSs_keygen();
     }
 
-    else if(upperCase_switch == 1 && numbers_switch == 1) // вРег + цифр
+    else if(usr_choose_upcase == 1 && usr_choose_nums == 1) // вРег + цифр
     {
         ucN_keygen();
     }
 
-    else if(upperCase_switch == 1 && specialSymbol_switch == 1 )     // вРег + спецСимвол
+    else if(usr_choose_upcase == 1 && usr_choose_specsyms == 1 )     // вРег + спецСимвол
     {
         ucSs_keygen();
     }
 
-    else if(upperCase_switch == 1 && numbers_switch == 1 && specialSymbol_switch == 1)    // вРег + цифр + спецСимвол
+    else if(usr_choose_upcase == 1 && usr_choose_nums == 1 && usr_choose_specsyms == 1)    // вРег + цифр + спецСимвол
     {
         ucNSs_keygen();
     }
 
-    else if(lowerCase_switch == 1 && upperCase_switch == 1 && numbers_switch == 1 && specialSymbol_switch == 1) // нРег + вРег + цифр + спецСимвол
+    else if(usr_choose_lowcase == 1 && usr_choose_upcase == 1 && usr_choose_nums == 1 && usr_choose_specsyms == 1) // нРег + вРег + цифр + спецСимвол
     {
         lcUcNSs_keygen();
     }
