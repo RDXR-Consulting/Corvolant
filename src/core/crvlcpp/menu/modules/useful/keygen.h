@@ -327,43 +327,75 @@ int lcUcNSs_keygen() // нРег + вРег + цифр + спецСимвл
     return 0;
 }
 
-int usr_choose_keygen_act()
+//------------------------
+
+int usr_choose_keygen_act_length()
 {
-    std::cout << "Укажите длину пароля: "; std:: cin >> pwd_length; // Ввод длины пароля
-    std::cout << "Укажите используемые символы\n 0 - не использовать, 1 - использовать \n"; // Ввод символов, используемых в пароле
-    std::cout << "Символы в нижнем регистре: "; std::cin >> lowerCase_switch;
-    std::cout << "\nСимволы в верхнем регистре: "; std::cin >> upperCase_switch;
-    std::cout << "\nЦифры: "; std::cin >> numbers_switch;
-    std::cout << "\nСпециальные символы: "; std::cin >> specialSymbol_switch;
+    std::cout << "Укажите количество символов в пароле: ";
+    int usr_choose_keygen_length; std::cin >> usr_choose_keygen_length;
+    return usr_choose_keygen_length;
+}
+
+int usr_choose_keygen_act_lowcase()
+{
+    std::cout << "Укажите используемые символы\n 0 - не использовать, 1 - использовать \n";
+    std::cout << "Символы в нижнем регистре: ";
+    int usr_choose_keygen_lowcase; std::cin >> usr_choose_keygen_lowcase; cin.ignore(32766, '\n');
+    return usr_choose_keygen_lowcase;
+}
+
+int usr_choose_keygen_act_upcase()
+{
+    std::cout << "Символы в верхнем регистре: ";
+    int usr_choose_keygen_upcase; std::cin >> usr_choose_keygen_upcase; cin.ignore(32766, '\n');
+    return usr_choose_keygen_upcase;
+}
+
+int usr_choose_keygen_act_nums()
+{
+    std::cout << "Цифры: ";
+    int usr_choose_keygen_nums; std::cin >> usr_choose_keygen_nums; cin.ignore(32766, '\n');
+    return usr_choose_keygen_nums;
+}
+
+int usr_choose_keygen_act_specsyms()
+{
+    std::cout << "Специальные символы (!, *, /): ";
+    int usr_choose_keygen_specsyms; std::cin >> usr_choose_keygen_specsyms; cin.ignore(32766, '\n');
+    return usr_choose_keygen_specsyms;
 }
 
 
 int usr_choose_keygen()
 {
     cout << "обсада";
-    // !!! сделать оповещение о некорректном вводе !!!
+    int usr_choose_length = usr_choose_keygen_act_length();
+    int usr_choose_lowcase = usr_choose_keygen_act_lowcase();
+    int usr_choose_upcase = usr_choose_keygen_act_upcase();
+    int usr_choose_nums = usr_choose_keygen_act_nums();
+    int usr_choose_specsyms = usr_choose_keygen_act_specsyms();
 
-    if(lowerCase_switch == 1) // нРег
+    if(usr_choose_lowcase == 1)
     {
         lc_keygen();
     }
 
-    else if(upperCase_switch == 1) // вРег
+    else if(usr_choose_upcase == 1)
     {
         uc_keygen();
     }
 
-    else if(numbers_switch == 1) // цифр
+    else if(usr_choose_nums == 1)
     {
         n_keygen();
     }
 
-    else if(specialSymbol_switch == 1) // спецСимв
+    else if(usr_choose_specsyms == 1)
     {
         ss_keygen();
     }
 
-    else if(lowerCase_switch == 1 && upperCase_switch == 1) // нРег + вРег
+    else if(usr_choose_lowcase == 1 && usr_choose_upcase == 1) // нРег + вРег
     {
         lcUc_keygen();
     }
@@ -421,9 +453,7 @@ int usr_choose_keygen()
 
 int keygen_func()
 {
-    usr_choose_keygen_act();
     usr_choose_keygen();
-
     return 0;
 }
 
