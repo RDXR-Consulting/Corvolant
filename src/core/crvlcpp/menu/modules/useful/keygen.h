@@ -1,3 +1,8 @@
+
+
+#ifndef CRVL_KEYGEN_SHIT_H
+#define CRVL_KEYGEN_SHIT_H
+
 #ifndef CRVL_KEYGEN_H
 #define CRVL_KEYGEN_H
 
@@ -162,24 +167,15 @@ std::string lcUcNSs_dictionary[90] = //нРег + вРег + цифр + спец
 
 int pwd_length; // Длина пароля
 std::string password[0];
+
+int lowerCase_switch;
+int upperCase_switch;
+int numbers_switch;
+int specialSymbol_switch;
+
 int dictionary[4];
 
 std::string dictionary_list[4] = {"Нижний регистр: ", "\nВерхний регистр: ", "\nЦифры: ", "\nСпециальные символы: "};
-
-int usr_choose_keygen_act() // Ввод пользователя
-{
-    std::cout << "Укажите длину пароля: "; std:: cin >> pwd_length; // Ввод длины пароля
-
-    std::cout << "\nУкажите используемые символы\n 0 - не использовать, 1 - использовать \n"; // Ввод символов, используемых в пароле
-
-    for(int i;  i < 4; i++)
-    {
-        std::cout << dictionary_list[i];
-        std::cin >> dictionary[i];
-    }
-
-
-}
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - Генератор паролей - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -194,6 +190,7 @@ int lc_keygen() // нРег
         std::cout << password[i];
     }
 }
+
 
 int lcUc_keygen() // нРег + вРег
 {
@@ -307,78 +304,97 @@ int lcUcNSs_keygen() // нРег + вРег + цифр + спецСимвл
     return 0;
 }
 
-int usr_choose_keygen() // Обработка ввода пользователья
+// - - - - - - - - - - - - - - - - - - - - - - - Обработка ввода пользователья - - - - - - - - - - - - - - - - - - - - - - - - - //
+int usr_choose_keygen()
 {
-    int dicDReg = dictionary[0];             // Ввод пользователя: Нижний регистр
-    int dicUReg = dictionary[1];             // Ввод пользователя: Верхний регистр
-    int dicNumb = dictionary[2];             // Ввод пользователя: Цифры
-    int dicSSb = dictionary[3];              // Ввод пользователя: Специльные символы
-
 
     // !!! сделать оповещение о некорректном вводе !!!
 
-    if(dicDReg == 1) // нРег
+    if(lowerCase_switch == 1) // нРег
     {
-        lc_keygen();                                //lrUrNSs_keygen()
+        lc_keygen();
     }
 
-    if(dicDReg == 1 && dicUReg == 1) // нРег + вРег
+    else if(lowerCase_switch == 1 && upperCase_switch == 1) // нРег + вРег
     {
         lcUc_keygen();
     }
 
-    if(dicDReg == 1 && dicNumb == 1) // нРег + цифр
+    else if(lowerCase_switch == 1 && numbers_switch == 1) // нРег + цифр
     {
         lcN_keygen();
     }
 
-    if(dicDReg == 1 && dicSSb == 1) //нРег + спецСимвол
+    else if(lowerCase_switch == 1 && specialSymbol_switch == 1) //нРег + спецСимвол
     {
         lcSs_keygen();
     }
 
-    if(dicDReg == 1 && dicUReg == 1 && dicNumb == 1) // нРег + вРег + цифр
+    else if(lowerCase_switch == 1 && upperCase_switch == 1 && numbers_switch == 1) // нРег + вРег + цифр
     {
         lcUcN_Keygen();
     }
 
-    if(dicDReg == 1 && dicUReg == 2) //нРег + вРег + спецСимвол
+    else if(lowerCase_switch == 1 && upperCase_switch == 1 && specialSymbol_switch == 1) //нРег + вРег + спецСимвол
     {
         lcUcSs_keygen();
     }
 
-    if(dicDReg == 1 && dicUReg == 1 && dicSSb == 1) // нРег + цифр + спецСимвол
+    else if(lowerCase_switch == 1 && upperCase_switch == 1 && specialSymbol_switch == 1) // нРег + цифр + спецСимвол
     {
         lcNSs_keygen();
     }
 
-    if(dicUReg == 1 && dicNumb == 1) // вРег + цифр
+    else if(upperCase_switch == 1 && numbers_switch == 1) // вРег + цифр
     {
         ucN_keygen();
     }
 
-    if(dicUReg == 1 && dicSSb == 1 )     // вРег + спецСимвол
+    else if(upperCase_switch == 1 && specialSymbol_switch == 1 )     // вРег + спецСимвол
     {
         ucSs_keygen();
     }
 
-    if(dicUReg == 1 && dicNumb == 1 && dicSSb == 1)    // вРег + цифр + спецСимвол
+    else if(upperCase_switch == 1 && numbers_switch == 1 && specialSymbol_switch == 1)    // вРег + цифр + спецСимвол
     {
         ucNSs_keygen();
     }
 
-    if(dicDReg == 1 && dicUReg == 1 && dicNumb == 1 && dicSSb == 1) // нРег + вРег + цифр + спецСимвол
-
+    else if(lowerCase_switch == 1 && upperCase_switch == 1 && numbers_switch == 1 && specialSymbol_switch == 1) // нРег + вРег + цифр + спецСимвол
     {
         lcUcNSs_keygen();
     }
+
+    else
+    {
+        std::cout << "\nОшибка!";
+    }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - Ввод пользователя - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+int usr_choose_keygen_act()
+{
+    std::cout << "Укажите длину пароля: "; std:: cin >> pwd_length; // Ввод длины пароля
+
+    std::cout << "\nУкажите используемые символы\n 0 - не использовать, 1 - использовать \n"; // Ввод символов, используемых в пароле
+
+    std::cout << "Нижний регистр: "; std::cin >> lowerCase_switch;
+    std::cout << "\nВерхний регистр: "; std::cin >> upperCase_switch;
+    std::cout << "\nЦифры: "; std::cin >> numbers_switch;
+    std::cout << "\nСпециальные символы: "; std::cin >> specialSymbol_switch;
 
 }
 
 int keygen_func()
 {
-    usr_choose_keygen();
     usr_choose_keygen_act();
+    usr_choose_keygen();
+
+
+    return 0;
 }
 
-#endif 
+
+
+
+#endif
