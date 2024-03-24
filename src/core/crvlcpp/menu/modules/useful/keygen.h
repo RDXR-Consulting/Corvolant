@@ -1,8 +1,4 @@
 
-
-#ifndef CRVL_KEYGEN_SHIT_H
-#define CRVL_KEYGEN_SHIT_H
-
 #ifndef CRVL_KEYGEN_H
 #define CRVL_KEYGEN_H
 
