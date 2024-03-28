@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>menu_icon.png</file>
+    <file>cancel_icon.png</file>
+    <file>keylogger_icon.png</file>
+    <file>crvl_logo.jpg</file>
+    <file>useful_bgPic.png</file>
+    <file>useful_icon.png</file>
+  </qresource>
+</RCC>
