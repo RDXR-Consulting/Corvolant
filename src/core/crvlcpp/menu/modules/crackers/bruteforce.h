@@ -3,51 +3,21 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
-#include <ctime>
+#include <fstream>
 
-std::string abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ", pass = "CFWWSWQ";
-std::string str;
-bool found = false;
 
-// рекурсивный брут
-void BrutRec(int n)
+int bruteforce_func()
 {
-    for (int i = 0; i < abc.size(); ++i)
+    std::string line;
+
+    std::ifstream in("brutepasswords.txt"); // окрываем файл для чтения
+    if (in.is_open())
     {
-        str.push_back(abc[i]);
-        if (n > 1)
+        while (std::getline(in, line))
         {
-            BrutRec(n - 1);
-            if (found)
-            {
-                return;
-            }
-        }
-        if (str == pass)
-        {
-            found = true;
-            break;
-        }
-        else
-        {
-            str.pop_back();
+            std::cout << line << std::endl;
         }
     }
+    in.close();     // закрываем файл
 }
-
-
-int bruteforce_func() {
-#if 1
-    for (int rd = 1; rd <= 10; ++rd) // какие длины паролей перебирать
-    {
-        BrutRec(rd);
-        if (found) {
-            break;
-        }
-    }
-    std::cout << str << std::endl;
-    return 0;
-}
-#endif
 #endif
