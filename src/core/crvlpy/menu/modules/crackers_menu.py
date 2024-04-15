@@ -1,4 +1,3 @@
-#DunastyC 5.03.24#
 from menu.modules.crackers import bruteforce as brut
 from menu.modules.crackers import fisher as fish
 
@@ -21,7 +20,9 @@ def crackers():
     print("│============================================│")
     print("│ 1) Брутфорс                                │")
     print("│ 2) Фишер                                   │")
-    print("│ 3) В разработке                            │")
+    print("│ 3) Анализ сетей                            │")
+    print("│ 4) Ботнет (кукольный театр ддос + реверс)  │")
+    print("│ 5) Генератор помех (сети и реверс)         │")
     print("│                                            │")
     print("╰────────────────────────────────────────────╯\n")
     usr_choose_crackers()
