@@ -1,26 +1,11 @@
-from menu.modules.crackers import bruteforce as brut
-from menu.modules.crackers import fisher as fish
-
-from src.core.crvlpy.menu.main_menu import menu
-
-
-def usr_choice_crackers_act():
-    return int(input("Выберите инструмент: "))
+from menu.modules.crackers import bruteforce as bfr
+from menu.modules.crackers import fisher as fsh
+from menu.modules.crackers import analyzer as anl
+from menu.modules.crackers import botnet as btn
+from menu.modules.crackers import jammer as jam
 
 
-def usr_choice_crackers():
-    user_choice_var = usr_choice_crackers_act()
-    if user_choice_var == 1:
-        brut.bruteforce_func()
-    elif user_choice_var == 2:
-        fish.fisher_func()
-    elif user_choice_var == 0:
-        menu()
-    else:
-        print("Error")
-
-
-def crackers():
+def crackmenu():
     print("╭────────────────────────────────────────────╮\n"
           "│          Г Л А В Н О Е    М Е Н Ю          │\n"
           "│============================================│\n"
@@ -31,4 +16,26 @@ def crackers():
           "│ 5) Генератор помех                         │\n"
           "│ 0) Назад                                   │\n"
           "╰────────────────────────────────────────────╯\n")
-    usr_choice_crackers()
+
+    choosing = True
+    while choosing:
+        usr_choose = int(input("Выберите инструмент: "))
+        if usr_choose == 1:
+            bfr.bruteforce_func()
+            choosing = False
+        elif usr_choose == 2:
+            fsh.fisher_func()
+            choosing = False
+        elif usr_choose == 3:
+            anl.analyzer_func()
+            choosing = False
+        elif usr_choose == 4:
+            btn.botnet_func()
+            choosing = False
+        elif usr_choose == 5:
+            jam.jammer_func()
+            choosing = False
+        elif usr_choose == 0:
+            exit()
+        else:
+            print("Вы ввели что то неправильное")
