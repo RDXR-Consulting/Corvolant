@@ -1,18 +1,11 @@
-from menu.modules.useful import rundata as run
-
+from menu.modules.useful import randata as ran
+from menu.modules.useful import scripts as scr
+from menu.modules.useful import fastCollector as fcol
+from menu.moduules.useful import cow
 
 def usr_choose_useful_act():
     return int(input("Выберите инструмент: "))
 
-
-def usr_choose_useful():
-    user_choice_var = usr_choose_useful_act()
-    if user_choice_var == 1:
-        run.rundata_func()
-    if user_choice_var == 2:
-        pass
-    if user_choice_var == 3:
-        pass
 
 
 def useful():
@@ -23,6 +16,25 @@ def useful():
           "│ 2) Скрипты                                 │\n"
           "│ 3) Быстрый сбор данных о системе           │\n"
           "│ 4) КОРОВА                                  │\n"
-          "│                                            │\n"
+          "│ 0) Выйти                                   │\n"
           "╰────────────────────────────────────────────╯\n")
-    usr_choose_useful()
+
+    choosing = True
+    while choosing:
+        usr_choose = int(input("Выберите раздер: "))
+        if usr_choose == 1:
+            ran.rundata_func()
+            choosing = False
+        elif usr_choose == 2:
+            scr.scripts_func()
+            choosing = False
+        elif usr_choose == 3:
+            fcol.fastCollector_func
+            choosing = False
+        elif usr_choose == 4:
+            cow.cow_func()
+            choosing = False
+        elif usr_choose == 0:
+            exit()
+        else:
+            print("Вы ввели что-то неправильное")
