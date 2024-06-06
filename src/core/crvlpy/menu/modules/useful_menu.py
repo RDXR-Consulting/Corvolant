@@ -1,11 +1,11 @@
+from menu import main_menu
 from menu.modules.useful import randata as ran
 from menu.modules.useful import scripts as scr
 from menu.modules.useful import fastCollector as fcol
-from menu.moduules.useful import cow
+from menu.modules.useful import cow
 
 def usr_choose_useful_act():
     return int(input("Выберите инструмент: "))
-
 
 
 def useful():
@@ -35,6 +35,6 @@ def useful():
             cow.cow_func()
             choosing = False
         elif usr_choose == 0:
-            exit()
+            main_menu.glavmenu()
         else:
             print("Вы ввели что-то неправильное")
