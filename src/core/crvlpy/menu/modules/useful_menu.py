@@ -4,11 +4,7 @@ from menu.modules.useful import scripts as scr
 from menu.modules.useful import fastCollector as fcol
 from menu.modules.useful import cow
 
-def usr_choose_useful_act():
-    return int(input("Выберите инструмент: "))
-
-
-def useful():
+def usefulmenu():
     print("╭────────────────────────────────────────────╮\n"
           "│            П О Л Е З Н О С Т И             │\n"
           "│============================================│\n"
