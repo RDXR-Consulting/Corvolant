@@ -1,3 +1,4 @@
+from menu import main_menu
 from menu.modules.spies import keylogger as keylog
 from menu.modules.spies import blackBox as box
 from menu.modules.spies import osint
@@ -31,6 +32,6 @@ def spiesmenu():
         osint.osint_func()
         choosing = False
     elif usr_choose == 0:
-        exit()
+        main_menu.glavmenu()
     else:
         print("Вы ввели что-то неправильное")
