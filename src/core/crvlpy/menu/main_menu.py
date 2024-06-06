@@ -22,13 +22,13 @@ def glavmenu():
             crackers_menu.crackmenu()
             choosing = False
         elif usr_choose == 2:
-            miners_menu.miners()
+            miners_menu.minersmenu()
             choosing = False
         elif usr_choose == 3:
-            spies_menu.spies()
+            spies_menu.spiesmenu()
             choosing = False
         elif usr_choose == 4:
-            useful_menu.useful()
+            useful_menu.usefulmenu()
             choosing = False
         elif usr_choose == 0:
             exit()
