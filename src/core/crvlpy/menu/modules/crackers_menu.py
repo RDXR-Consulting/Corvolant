@@ -1,3 +1,4 @@
+from menu import main_menu
 from menu.modules.crackers import bruteforce as bfr
 from menu.modules.crackers import fisher as fsh
 from menu.modules.crackers import analyzer as anl
@@ -36,6 +37,6 @@ def crackmenu():
             jam.jammer_func()
             choosing = False
         elif usr_choose == 0:
-            exit()
+            main_menu.glavmenu()
         else:
             print("Вы ввели что то неправильное")
