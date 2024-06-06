@@ -1,2 +1,2 @@
 def keylogger_func():
-    pass
+    print("Здесь будет кейлоггер")
