@@ -1,3 +1,4 @@
+from menu import main_menu
 from menu.modules.miners import autominer as mnr
 from menu.modules.miners import transport as trp
 from menu.modules.miners import asicminer as amr
@@ -26,6 +27,6 @@ def minermenu():
             amr.asicminer_func()
             choosing = False
         elif usr_choose == 0:
-            exit()
+            main_menu.glavmenu()
         else:
             print("Вы ввели что то неправильное")
