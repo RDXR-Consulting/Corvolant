@@ -12,6 +12,7 @@ int usr_choose_crackers_act()
     return usr_choose_crackers_var;
 }
 
+
 int usr_choose_crackers()
 {
     int user_choose_var = usr_choose_crackers_act();
@@ -45,6 +46,5 @@ void crackers()
                 "╰────────────────────────────────────────────╯\n";
     usr_choose_crackers();
 }
-
 
 #endif
