@@ -60,10 +60,10 @@ int fisher_func()
     std::cout <<"│============================================│\n";
     std::cout <<"│ 1) VK                                      │\n";
     std::cout <<"│ 2) Instagramm                              │\n";
-    std::cout <<"│ 4) Steam                                   │\n";
-    std::cout <<"│ 5) Youtube                                 │\n";
-    std::cout <<"│ 6) Wildberries                             │\n";
-    std::cout <<"│ 3) RDXR                                    │\n";
+    std::cout <<"│ 3) Steam                                   │\n";
+    std::cout <<"│ 4) Youtube                                 │\n";
+    std::cout <<"│ 5) Wildberries                             │\n";
+    std::cout <<"│ 6) RDXR                                    │\n";
     std::cout <<"│                                            │\n";
     std::cout <<"╰────────────────────────────────────────────╯\n";
     fisher_func_choose();
